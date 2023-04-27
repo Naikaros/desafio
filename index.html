@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Encriptador de Texto - Desafio 1</title>
 </head>
 <body>
+
+    <header class="width100">
+        <img src="img/Logo.png" alt="Logo alura" class="logo">
+    </header>
+
+    <main class="flex-box width100">
+        <div class="contenedor-encriptar flex-box ">
+            <textarea class="txt-encriptar" name="txt-encriptar" id="txt-encriptar" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <section class="txt-clausula">
+            <p class="clausula">Solo letras minusculas y sin tildes.</p>
+            </section>
+            <section class="botones flex-box">
+            <input type="button" class="boton" value="Encriptar" id="btn-encriptar">
+            <input type="button" class="boton" value="Desencriptar" id="btn-desencriptar">
+            </section>
+        </div>
+        <div class="contenedor-resultado flex-box">
+            <div class="primera-etapa flex-box" id="primera-etapa">
+                <img class="munieco" src="img/Muñeco.png" alt="Muñeco Alura">
+                <h2 class="tituloResultado">Ningun texto fue encriptado/desencriptado</h2>
+                <p class="informeResultado">Ingresa el texto que deseas encriptar/desencriptar</p>
+            </div>
+            <div class="segunda-etapa" id="segunda-etapa">
+            <textarea class="txt-resultado" name="txt-resultado" id="txt-resultado" cols="30" rows="10"></textarea>
+            <input class="boton" type="button" name="copiar" id="copiar" value="Copiar">
+            </div>
+        </div>
+    </main>
+
+    <footer class="width100 flex-box">
+        <p class="copyright">&copy Todos los derechos reservados Níkolas Box - Alura</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     
 </body>
 </html>

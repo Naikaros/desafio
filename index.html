@@ -17,13 +17,13 @@
     <main class="flex-box width100">
         <div class="contenedor-encriptar flex-box ">
             <textarea class="txt-encriptar" name="txt-encriptar" id="txt-encriptar" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
-            <section class="txt-clausula">
-            <p class="clausula">Solo letras minusculas y sin tildes.</p>
-            </section>
-            <section class="botones flex-box">
+            <div class="txt-clausula">
+            <p class="clausula"><img src="img/Vector.png" alt="Atención:"> Solo letras minúsculas y sin tildes.</p>
+            </div>
+            <div class="botones flex-box">
             <input type="button" class="boton" value="Encriptar" id="btn-encriptar">
             <input type="button" class="boton" value="Desencriptar" id="btn-desencriptar">
-            </section>
+            </div>
         </div>
         <div class="contenedor-resultado flex-box">
             <div class="primera-etapa flex-box" id="primera-etapa">
@@ -32,8 +32,10 @@
                 <p class="informeResultado">Ingresa el texto que deseas encriptar/desencriptar</p>
             </div>
             <div class="segunda-etapa" id="segunda-etapa">
-            <textarea class="txt-resultado" name="txt-resultado" id="txt-resultado" cols="30" rows="10"></textarea>
-            <input class="boton" type="button" name="copiar" id="copiar" value="Copiar">
+                <textarea class="txt-resultado" name="txt-resultado" id="txt-resultado" cols="30" rows="10"></textarea>
+                <div class="btncopiar">
+                    <input class="boton" type="button" name="copiar" id="btn-copiar" value="Copiar">
+                </div>
             </div>
         </div>
     </main>

@@ -38,8 +38,21 @@ function encriptar() {
 function desencriptar() {
     var porDesencriptar = document.getElementById("txt-encriptar").value;
 
-    if (/[A-áéíóúZÁÉÍÓÚ]/.test(porDesencriptar)) {
-        alert("El texto debe estar en minúsculas y sin tildes");
+    if (porDesencriptar.length === 0) {
+        Swal.fire({
+            icon: "error",
+            text: "El campo de texto está vacio",
+            customClass: 'alerta-texto'
+        })
+        return;
+    }
+
+    if (/[A-ZáéíóúZÁÉÍÓÚ]/.test(porDesencriptar)) {
+        Swal.fire({
+            icon: "error",
+            text: "Solo letras minusculas y sin tildes.",
+            customClass: 'alerta-texto'
+        })
         return;
     }
 
@@ -70,5 +83,5 @@ btn1.onclick = encriptar;
 var btn2 = document.getElementById("btn-desencriptar");
 btn2.onclick = desencriptar;
 
-var btn3 = document.getElementById("copiar");
+var btn3 = document.getElementById("btn-copiar");
 btn3.onclick = copiarTexto;

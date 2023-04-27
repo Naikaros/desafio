@@ -36,16 +36,15 @@ header {
     height: 5em;
     justify-content: start;
     align-items: center;
-    margin: 20px 0 20px 30px;
+    padding-bottom: 70px;
 }
 main {
-    margin: 30px 0 30px 0;
     justify-content: space-around;
     height: 85%;
+    margin: 10px 0 10px 0;
 }
 footer {
     height: 5em;
-    background-color: var(--azul);
     justify-content: center;
     align-items: center;
 }
@@ -63,19 +62,41 @@ footer {
     border-radius: 24px;
     cursor: pointer;
     font-size: 17px;
+    font-weight: bold;
     width: 328px;
     height: 67px;
 }
 
+/* Estilo Botones */
+
+#btn-encriptar {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+#btn-desencriptar {
+    color: var(--azul);
+    background-color: var(--clarito);
+}
+
+#btn-copiar {
+    background-color: var(--blanco);
+}
+/* Header */
+.logo {
+    padding: 10px 0 10px 0;
+}
 /* Main Izquierda */
 
 .contenedor-encriptar {
     flex-direction: column;
+    align-items: end;
     width: 60%;
     margin: auto;
 }
 
 .txt-encriptar {
+    width: 680px;
     font-size: 4em;
     line-height: 170%;
     background-color: var(--clarito);
@@ -87,11 +108,12 @@ footer {
 }
 
 .txt-clausula {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     font-size: 2em;
-    text-align: center;
-}
+    margin-right: 378px;
+    
+} 
+
+
 
 .botones {
     justify-content: center;
@@ -107,30 +129,33 @@ footer {
     min-width: 400px;
 }
 
-.primera-etapa {
-    width: 91%;
+.primera-etapa, .segunda-etapa {
+    width: 400px;
+    height: 840px;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    border-radius: 34px;
     background-color: var(--blanco);
-    padding: 180px 10px 220px 10px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+   
 }
 
+.primera-etapa {
+    text-align: center;
+    justify-content: center;
+}
 
 .segunda-etapa {
     display: none;
-    width: 91%;
-    flex-direction: column;
     align-items: center;
     gap: 2rem;
-    background-color: var(--blanco);
-    padding-bottom: 35px;
 }
+
 
 .txt-resultado {
     margin-top: 1rem;
     width: 89%;
-    height: 600px;
+    height: 705px;
     font-size: 1.7em;
     line-height: 250%;
     background-color: rgba(55,55,55,0)
@@ -139,13 +164,81 @@ footer {
 /* Footer */
 
 .copyright {
-    color: var(--blanco);
-    font-size: 1.7em;
+    font-size: 1.9em;
+    font-weight: bold;
     text-align: center;
 }
 
 /* Alertas */
 
 .alerta-texto {
-    font-size: 2rem;
+    font-size: 1.6em;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .logo {
+        margin-top: 73.42px;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-encriptar {
+        width: 100%;
+        align-items: center;
+    }
+
+    .txt-encriptar {
+        width: 90%;
+        margin-top: 116px;
+    }
+
+    .contenedor-resultado {
+        width: 100%;
+        margin: 32px;
+    }
+
+    .primera-etapa, .segunda-etapa {
+        width: 90%;
+        height: auto;
+    }
+    
+    .primera-etapa {
+        height: 300px;
+        font-size: 1.6em;
+    }
+
+    .txt-resultado {
+        height: auto;
+        line-height: normal;
+    }
+
+    .btncopiar {
+        margin: 40px;
+    }
+    
+    .munieco {
+        display: none;
+    }
+    
+    footer {
+        background-color: var(--azul);
+        color: var(--blanco);
+    }
+}
+
+@media (max-width: 700px) {
+    .txt-clausula {
+        margin: 0;
+    }
+    .botones {
+        flex-direction: column;
+    }
+
+    .copyright {
+        font-size: 1.5em;
+    }
 }

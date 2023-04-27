@@ -1,0 +1,151 @@
+/* Propiedades Custom */
+
+:root {
+    --azul:#0A3871;
+    --clarito: #D8DFE8;
+    --blanco: #FFFFFF;
+    
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /* 1rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Globales */
+
+body {
+    background-color: var(--clarito);
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    border: none;
+}
+header {
+    height: 5em;
+    justify-content: start;
+    align-items: center;
+    margin: 20px 0 20px 30px;
+}
+main {
+    margin: 30px 0 30px 0;
+    justify-content: space-around;
+    height: 85%;
+}
+footer {
+    height: 5em;
+    background-color: var(--azul);
+    justify-content: center;
+    align-items: center;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.boton {
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 328px;
+    height: 67px;
+}
+
+/* Main Izquierda */
+
+.contenedor-encriptar {
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+
+.txt-encriptar {
+    font-size: 4em;
+    line-height: 170%;
+    background-color: var(--clarito);
+    color: var(--azul);
+}
+
+.txt-encriptar::placeholder{
+    color: var(--azul);
+}
+
+.txt-clausula {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 2em;
+    text-align: center;
+}
+
+.botones {
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Main derecha */
+
+.contenedor-resultado {
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    min-width: 400px;
+}
+
+.primera-etapa {
+    width: 91%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--blanco);
+    padding: 180px 10px 220px 10px;
+}
+
+
+.segunda-etapa {
+    display: none;
+    width: 91%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--blanco);
+    padding-bottom: 35px;
+}
+
+.txt-resultado {
+    margin-top: 1rem;
+    width: 89%;
+    height: 600px;
+    font-size: 1.7em;
+    line-height: 250%;
+    background-color: rgba(55,55,55,0)
+}
+
+/* Footer */
+
+.copyright {
+    color: var(--blanco);
+    font-size: 1.7em;
+    text-align: center;
+}
+
+/* Alertas */
+
+.alerta-texto {
+    font-size: 2rem;
+}
